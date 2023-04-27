@@ -1,8 +1,13 @@
-export interface Todo {
+export type Tag = {
   id: number;
-  content: string;
-}
+  label: string;
+};
 
-export interface Meta {
-  totalCount: number;
+export interface IContact {
+  id: number;
+  firstName?: string;
+  lastName?: string;
+  phoneNumber: string;
+  email?: string;
+  tags?: Tag[];
 }
