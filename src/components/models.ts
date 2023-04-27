@@ -1,13 +1,13 @@
 export type Tag = {
   id: number;
-  name: string;
+  label: string;
 };
 
-export interface Contact {
+export interface IContact {
   id: number;
   firstName?: string;
   lastName?: string;
-  phoneNumber?: string;
+  phoneNumber: string;
   email?: string;
   tags?: Tag[];
 }

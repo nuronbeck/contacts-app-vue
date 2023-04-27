@@ -4,7 +4,7 @@
 
     <ContactsList />
 
-    <q-page-sticky class="lt-xl" position="bottom-right" :offset="[18, 18]">
+    <q-page-sticky class="lt-xl" position="bottom-right" :offset="[12, 12]">
       <q-btn fab icon="add" color="primary" to="/contact/create" />
     </q-page-sticky>
   </q-page>

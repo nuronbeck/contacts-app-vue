@@ -23,7 +23,7 @@
     <q-list>
       <q-item-label header> Управление контактами </q-item-label>
 
-      <LayoutDrawerMenuItem
+      <DrawerMenuItem
         v-for="link in essentialLinks"
         :key="link.title"
         v-bind="link"
@@ -36,10 +36,10 @@
 import { storeToRefs } from 'pinia';
 import { useLayoutSettingsStore } from 'src/stores/layoutSettingsStore';
 
-import LayoutDrawerMenuItem from './LayoutDrawerMenuItem.vue';
-import type { ILayoutDrawerMenuItem } from './LayoutDrawerMenuItem.vue';
+import DrawerMenuItem from './DrawerMenuItem.vue';
+import type { IDrawerMenuItem } from './DrawerMenuItem.vue';
 
-const essentialLinks: ILayoutDrawerMenuItem[] = [
+const essentialLinks: IDrawerMenuItem[] = [
   {
     title: 'Мои контакты',
     icon: 'group',

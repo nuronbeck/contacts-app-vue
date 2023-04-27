@@ -11,7 +11,11 @@
         round
         :icon="isDarkMode ? 'dark_mode' : 'light_mode'"
         @click="toggleDarkMode"
-      />
+      >
+        <q-tooltip>
+          {{ isDarkMode ? 'Яркий режим' : 'Тёмный режим' }}
+        </q-tooltip>
+      </q-btn>
     </q-toolbar>
   </q-header>
 </template>

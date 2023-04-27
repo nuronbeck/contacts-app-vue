@@ -6,17 +6,21 @@ const routes: RouteRecordRaw[] = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/IndexPage.vue') },
-      {
-        path: '/contact/:id',
-        component: () => import('src/pages/Contact/ContactPage.vue'),
-      },
+      // {
+      //   path: '/contact/:id',
+      //   component: () => import('pages/Contact/ContactPage.vue'),
+      // },
       {
         path: '/contact/create',
-        component: () => import('src/pages/Contact/CreateContact.vue'),
+        component: () => import('pages/Contact/CreateContactPage.vue'),
+      },
+      {
+        path: '/contact/edit/:id',
+        component: () => import('pages/Contact/EditContactPage.vue'),
       },
       {
         path: '/settings',
-        component: () => import('src/pages/SettingsPage.vue'),
+        component: () => import('pages/SettingsPage.vue'),
       },
     ],
   },

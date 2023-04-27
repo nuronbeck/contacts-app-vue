@@ -1,7 +1,7 @@
 <template>
   <q-layout view="hHh LpR fFf">
     <LayoutHeader />
-    <LayoutDrawerMenu />
+    <DrawerMenu />
 
     <q-page-container>
       <router-view />
@@ -10,6 +10,6 @@
 </template>
 
 <script setup lang="ts">
-import LayoutHeader from 'components/Layout/LayoutHeader/LayoutHeader.vue';
-import LayoutDrawerMenu from 'components/Layout/LayoutDrawerMenu/LayoutDrawerMenu.vue';
+import LayoutHeader from 'src/components/Layout/LayoutHeader.vue';
+import DrawerMenu from 'components/Layout/DrawerMenu/DrawerMenu.vue';
 </script>

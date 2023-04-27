@@ -1,5 +1,5 @@
 <template>
-  <q-item clickable :to="url" exact>
+  <q-item clickable :to="url" exact active-class="text-white bg-primary">
     <q-item-section v-if="icon" avatar>
       <q-icon :name="icon" />
     </q-item-section>
@@ -12,13 +12,13 @@
 </template>
 
 <script setup lang="ts">
-export interface ILayoutDrawerMenuItem {
+export interface IDrawerMenuItem {
   title: string;
   caption?: string;
   url?: string;
   icon?: string;
 }
-withDefaults(defineProps<ILayoutDrawerMenuItem>(), {
+withDefaults(defineProps<IDrawerMenuItem>(), {
   caption: '',
   url: '#',
   icon: '',
