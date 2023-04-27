@@ -1,0 +1,15 @@
+@mixin body-light {
+  body {
+    &:global(.body--light) {
+      @content;
+    }
+  }
+}
+
+@mixin body-dark {
+  body {
+    &:global(.body--dark) {
+      @content;
+    }
+  }
+}

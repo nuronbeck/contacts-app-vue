@@ -1,14 +1,6 @@
 <template>
-  <q-item
-    clickable
-    tag="a"
-    target="_blank"
-    :href="link"
-  >
-    <q-item-section
-      v-if="icon"
-      avatar
-    >
+  <q-item clickable :to="url" exact>
+    <q-item-section v-if="icon" avatar>
       <q-icon :name="icon" />
     </q-item-section>
 
@@ -20,15 +12,15 @@
 </template>
 
 <script setup lang="ts">
-export interface EssentialLinkProps {
+export interface ILayoutDrawerMenuItem {
   title: string;
   caption?: string;
-  link?: string;
+  url?: string;
   icon?: string;
 }
-withDefaults(defineProps<EssentialLinkProps>(), {
+withDefaults(defineProps<ILayoutDrawerMenuItem>(), {
   caption: '',
-  link: '#',
+  url: '#',
   icon: '',
 });
 </script>
